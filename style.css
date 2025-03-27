@@ -706,11 +706,11 @@ footer {
   justify-content: center;
   margin-bottom: 20px;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 .team-tab {
   padding: 10px 15px;
-  margin: 5px;
   cursor: pointer;
   background-color: #f0f0f0;
   border: 1px solid #ddd;
@@ -730,17 +730,20 @@ footer {
 
 .team-members {
   display: none;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .team-members.active {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
 }
 
 .member-card {
-  width: 250px;
+  width: 300px; /* Fixed width */
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 15px;
@@ -775,4 +778,17 @@ footer {
 
 .linkedin-btn:hover {
   background-color: #005582;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1000px) {
+  .team-members {
+    max-width: 960px; /* 3 x 300px + gaps */
+  }
+}
+
+@media (max-width: 768px) {
+  .member-card {
+    width: 280px; /* Slightly smaller for mobile */
+  }
 }
